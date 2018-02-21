@@ -20,12 +20,13 @@ for (var i = 0; i < datos.length; i++) {
 	var dato = datos[i].split(';');
 
 	var li = document.createElement('li');
-	li.setAttribute('class', dato[1]);
+	li.setAttribute('class', dato[1]);	
 	li.setAttribute('onclick', 'reproducir(this)');
 	li.setAttribute('name',i);
 
 	var img = document.createElement('img');
 	img.setAttribute('src', 'img/' + dato[1] + '.svg');
+	img.setAttribute('alt', ' ');
 	li.appendChild(img);
 
 	var texto = document.createTextNode(dato[0]);
@@ -44,7 +45,7 @@ function reproducir(elemento) {
 	}
 
 	if (elemento.className == "musica") {
-		var audio = '<audio id="reproductor" src="/musica/' + elemento.innerText + '"></audio>';
+		var audio = '<audio id="reproductor" src="musica/' + elemento.innerText + '"></audio>';
 
 		var p = document.createElement('p');
 		p.setAttribute('class', 'tituloMusica');
@@ -53,7 +54,7 @@ function reproducir(elemento) {
 		var textoh1 = document.createTextNode('Reproduciendo:');
 		
 		var img = document.createElement('img');
-		img.setAttribute('src','/img/reproducir.svg');
+		img.setAttribute('src','img/reproducir.svg');
 		img.setAttribute('class','iconoMusica');
 		
 		h1.appendChild(img);
@@ -71,7 +72,7 @@ function reproducir(elemento) {
 		document.getElementById('ventana').className = "fondo1";
 
 	} else {
-		ventana.innerHTML = '<video id="reproductor"><source src="/video/' + elemento.innerText + '" type="video/mp4"><br><track kind="subtitles" label="Español" src="/video/chistes.vtt"  srclang="es" default></strack></video>';
+		ventana.innerHTML = '<video id="reproductor"><source src="video/' + elemento.innerText + '" type="video/mp4"><br><track kind="subtitles" label="Español" src="video/chistes.vtt"  srclang="es" default></strack></video>';
 		document.getElementById('ventana').className = "fondo2";
 
 		if(parseInt(elemento.getAttribute('name'))==5){
@@ -84,7 +85,7 @@ function reproducir(elemento) {
 	document.getElementById('mislider').value = 1;
 	elemento.className += " reproduce";
 	clicko=true;
-	document.getElementById("stop").setAttribute('src', '/img/play.svg');
+	document.getElementById("stop").setAttribute('src', 'img/play.svg');
 }
 
 //funcionalidades a los controles
@@ -103,12 +104,12 @@ BtnStop.addEventListener('click', function () {
 	if (vid != null) {
 		if (clicko) {
 			vid.play();
-			BtnStop.setAttribute('src', '/img/pausa.svg');
+			BtnStop.setAttribute('src', 'img/pausa.svg');
 			clicko = false;
 		} else {
 			clicko = true;
 			vid.pause();
-			BtnStop.setAttribute('src', '/img/play.svg');
+			BtnStop.setAttribute('src', 'img/play.svg');
 		}
 	}
 });
