@@ -1,0 +1,473 @@
+/*	
+	PALETA DE COLORES: 	
+
+	rojo -> #DC304B
+	salmon -> #F95F62
+	blanco ->  #FFFFFF
+	azul fuerte -> #1F2D3D
+	gris azulado -> #343F4B
+*/
+
+.reproduce {
+	font-style: oblique;
+	animation-name: colorchangeshadow;
+	animation-duration: .3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1F2D3D;
+	height: 100vh;
+}
+
+.contenedor {
+	border: 2px solid black;
+	box-shadow: 0px 0px 20px black;
+	background-color: #1F2D3D;
+	margin: auto;
+}
+
+.cabecera {
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: #343F4B;
+	align-items: center;
+}
+
+#icono {
+	width: 50px;
+	height: 50px;
+	background-color: #1F2D3D;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+
+.cabecera h1 {
+	color: #DC304B;
+}
+
+@-webkit-keyframes colorchangeshadow {
+	0% {
+		padding-left: 5;
+	}
+
+	100% {
+		padding-left: 15px;
+	}
+}
+
+.login {
+	display: flex;
+	height: 43px;
+	padding: 5px;
+	border: 0.5px solid black;
+	background-color: #1F2D3D;
+	border-radius: 10px;
+	align-content: center;
+}
+
+.login a {
+	padding: 6px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+#ico_login {
+	width: 30px;
+	height: 30px;
+}
+
+.fila2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.musicona {
+	width: 75%;
+	min-width: 180px;
+	height: 390px;
+}
+
+#salir {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	border-radius: 50%;
+}
+
+#salir > img {
+	width: 100%;
+	height: 100%;
+}
+
+#ventana {
+	height: 90%;
+}
+
+.tituloMusica {
+	text-align: center;
+	color: black;
+	height: 100%;
+	padding-top: 130px;
+}
+
+.tituloMusica > * {
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 5px;
+}
+
+.tituloMusica h1 {
+	margin-bottom: 0;
+	border-bottom: none;
+	padding-top: 15px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.tituloMusica h1 img{
+	width: 60px;
+	height: 60px;
+}
+
+.tituloMusica h4 {
+	border-top: none;
+	padding-bottom: 15px;
+}
+
+#ventana > video {
+	width: 100%;
+	height: 100%;
+}
+
+.musicona .controles {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #016FAE;
+	height: 10%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.controles > div {
+	width: 17%;
+	min-width: 50px;
+	text-align: center;
+	padding-top: 5px;
+	align-items: center;
+}
+
+#play > img:hover, #next > img:hover, #Pantalla_completa > img:hover, #ControlVol:hover{
+	background-color: #DC304B;
+	transition: .2s all;
+	transform: scale(1.1);
+}
+
+.controles > div > img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+#Pantalla_completa > img, #ControlVol{
+	border-radius: 0;
+}
+
+#time {
+	display: flex;
+	justify-content: center;
+}
+
+#ControlVol {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#ControlVol > img {
+	width: 21px;
+	height: 20px;
+	margin: 4px;
+}
+
+#Pantalla_completa {
+	width: 50px;
+}
+
+#Pantalla_completa > img {
+	width: 100%;
+}
+
+.panel {
+	width: 25%;
+	min-width: 180px;
+}
+
+.leyenda {
+	border: 0.5px solid black;
+	background-color: #DC304B;
+}
+
+.leyenda h2 {
+	text-align: center;
+	padding: 5px;
+}
+
+#lista li {
+	padding: 5px;
+	list-style: none;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	border: 0.25px solid black;
+}
+
+#lista li > img {
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #016FAE;
+	padding: 5px;
+}
+
+#lista li:hover {
+	cursor: pointer;
+	background: rgba(153, 153, 153, 1);
+	background: -moz-linear-gradient(top, rgba(153, 153, 153, 1) 0%, rgba(153, 153, 153, 1) 12%, rgba(153, 153, 153, 1) 26%, rgba(153, 153, 153, 1) 41%, rgba(153, 153, 153, 1) 54%, rgba(254, 254, 254, 1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(153, 153, 153, 1)), color-stop(12%, rgba(153, 153, 153, 1)), color-stop(26%, rgba(153, 153, 153, 1)), color-stop(41%, rgba(153, 153, 153, 1)), color-stop(54%, rgba(153, 153, 153, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
+	background: -webkit-linear-gradient(top, rgba(153, 153, 153, 1) 0%, rgba(153, 153, 153, 1) 12%, rgba(153, 153, 153, 1) 26%, rgba(153, 153, 153, 1) 41%, rgba(153, 153, 153, 1) 54%, rgba(254, 254, 254, 1) 100%);
+	background: -o-linear-gradient(top, rgba(153, 153, 153, 1) 0%, rgba(153, 153, 153, 1) 12%, rgba(153, 153, 153, 1) 26%, rgba(153, 153, 153, 1) 41%, rgba(153, 153, 153, 1) 54%, rgba(254, 254, 254, 1) 100%);
+	background: -ms-linear-gradient(top, rgba(153, 153, 153, 1) 0%, rgba(153, 153, 153, 1) 12%, rgba(153, 153, 153, 1) 26%, rgba(153, 153, 153, 1) 41%, rgba(153, 153, 153, 1) 54%, rgba(254, 254, 254, 1) 100%);
+	background: linear-gradient(to bottom, rgba(153, 153, 153, 1) 0%, rgba(153, 153, 153, 1) 12%, rgba(153, 153, 153, 1) 26%, rgba(153, 153, 153, 1) 41%, rgba(153, 153, 153, 1) 54%, rgba(254, 254, 254, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#fefefe', GradientType=0);
+}
+
+.pie {
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	border-top: none;
+	background-color: #343F4B;
+	align-items: center;
+}
+
+.pie > * {
+	display: block;
+	text-align: center;
+	padding: 5px;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+
+.pie > label {
+	width: auto;
+	padding-top: 15px;
+	color: #DC304B;
+	font-weight: bold;
+}
+
+.fondo1 {
+	background-image: url(img/fondoreproductor.gif);
+	background-position: center;
+}
+
+.fondo2 {
+	background-color: black;
+}
+
+.gradiente,
+li {
+	background: rgba(226, 226, 226, 1);
+	background: -moz-linear-gradient(top, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 12%, rgba(209, 209, 209, 1) 38%, rgba(254, 254, 254, 1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226, 226, 226, 1)), color-stop(12%, rgba(219, 219, 219, 1)), color-stop(38%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
+	background: -webkit-linear-gradient(top, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 12%, rgba(209, 209, 209, 1) 38%, rgba(254, 254, 254, 1) 100%);
+	background: -o-linear-gradient(top, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 12%, rgba(209, 209, 209, 1) 38%, rgba(254, 254, 254, 1) 100%);
+	background: -ms-linear-gradient(top, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 12%, rgba(209, 209, 209, 1) 38%, rgba(254, 254, 254, 1) 100%);
+	background: linear-gradient(to bottom, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 12%, rgba(209, 209, 209, 1) 38%, rgba(254, 254, 254, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0);
+}
+
+#vista:-webkit-full-screen {
+	width: 90%;
+	height: 90%;
+}
+
+#vista:-webkit-full-screen > h1 {
+	border: 2px solid red;
+}
+
+/* slider personalizado */
+
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 3.3px 0;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 19.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #1f2d3d;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+	border: 1.8px solid #00001e;
+	height: 26px;
+	width: 26px;
+	border-radius: 15px;
+	background: #dc304b;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -3.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #28394e;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 19.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #1f2d3d;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+	border: 1.8px solid #00001e;
+	height: 26px;
+	width: 26px;
+	border-radius: 15px;
+	background: #dc304b;
+	cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 19.4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+	background: #16212c;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+	background: #1f2d3d;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+	box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+	border: 1.8px solid #00001e;
+	height: 26px;
+	width: 26px;
+	border-radius: 15px;
+	background: #dc304b;
+	cursor: pointer;
+	height: 19.4px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background: #1f2d3d;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background: #28394e;
+}
+
+/*FROMATO MOVIL*/
+@media only screen and (max-width: 750px) {
+	*{
+		height: auto;
+		padding: 0;
+		margin: 0;
+		
+	}
+	
+	body{
+		height: auto;
+	}
+	
+	.cabecera > h1{
+		width: 100%;
+		text-align: center;
+		padding: 5px;
+	}
+	
+	.musicona{
+		width: 100%;
+		margin-bottom: 60px;
+	}
+	
+	.ventana{
+		height: auto;
+	}
+	
+	.controles{
+		min-height: 100px;
+		display: flex;
+		flex-wrap: wrap;		
+	}
+	
+	.controles > div{
+
+	}
+	
+	#ControlVol{
+		width: 50%;
+	}
+	
+	.fila2{
+		display: block;
+	}
+	
+	.panel{
+		width: 100%;
+	}
+	
+	.pie{
+		height: auto;
+	}
+ }

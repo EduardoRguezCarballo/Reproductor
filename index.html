@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>DOR</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<div class="contenedor">
+		<div class="cabecera">
+			<img src="/img/escalera.svg" alt="Logo" id="icono">
+			<h1>Reproductor Mp3</h1>
+			<div class="login">
+				<a href="/index.html">Iniciar Sesión</a>
+				<img src="/img/login.svg" alt="icono login" id="ico_login">
+			</div>
+		</div>
+
+		<div class="fila2">
+			<div class="musicona" id="vista">
+				
+				<div id="salir" style="display: none">
+					<img src="/img/exit.svg" alt="cerrar pantalla completa">
+				</div>
+				
+				<div id="ventana" style="color: white" class="fondo2"></div>
+				
+				<div class="controles gradiente">
+					<div id="play">
+						<img id="stop" src="img/play.svg">
+					</div>
+					
+					<div id="next">
+						<img src="img/adelante.svg">
+					</div>
+					
+					<div id="time">
+						<span id="minuto">0</span>
+						<span>/</span>
+						<span id="tiempoTotal">0</span>
+					</div>
+					
+					<div id="ControlVol">
+						<img src="/img/volmenos.svg" alt="bajar volumen">
+						
+						<div class="volumen">
+							<input type="range" min="0" max="1" value="1" step="0.1" id="mislider" class="slider">
+						</div>					
+						
+						<img src="/img/volmas.svg" alt="bajar volumen">
+					</div>
+					
+					<div id="Pantalla_completa">
+						<img src="/img/Pcom.svg" alt="pantalla completa">					
+					</div>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="leyenda">
+					<h2>Lista</h2>
+				</div>
+
+				<ul id="lista"></ul>
+			</div>
+		</div>
+
+		<div class="pie">
+			<img src="/img/Copyright1.svg">
+			<img src="/img/Copyright2.svg">
+			<img src="/img/Copyright3.svg">
+		</div>
+	</div>
+	<script src="js.js"></script>
+</body>
+</html>
