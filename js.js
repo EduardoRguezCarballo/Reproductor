@@ -25,7 +25,7 @@ for (var i = 0; i < datos.length; i++) {
 	li.setAttribute('name',i);
 
 	var img = document.createElement('img');
-	img.setAttribute('src', '/img/' + dato[1] + '.svg');
+	img.setAttribute('src', 'img/' + dato[1] + '.svg');
 	li.appendChild(img);
 
 	var texto = document.createTextNode(dato[0]);
